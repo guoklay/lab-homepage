@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# build output
+client/dist/
+dist/
+
+# SQLite database files
+server/data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# uploaded files
+server/uploads/
+
+# logs
+*.log
+npm-debug.log*
+
+# env
+.env
+.env.local
+
+# editor / os
+.idea/
+.vscode/
+.claude/
+.DS_Store

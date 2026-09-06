@@ -1,0 +1,147 @@
+/* ===== 主题变量（暗色科技风） ===== */
+:root {
+  /* Element Plus 主色（科技蓝）及衍生色阶 */
+  --el-color-primary: #3b82f6;
+  --el-color-primary-light-3: #76a8f9;
+  --el-color-primary-light-5: #9dc1fa;
+  --el-color-primary-light-7: #c4dafc;
+  --el-color-primary-light-8: #d8e6fd;
+  --el-color-primary-light-9: #ebf3fe;
+  --el-color-primary-dark-2: #2f68c5;
+
+  /* 品牌色 */
+  --lab-primary: #3b82f6;
+  --lab-accent: #22d3ee; /* 青蓝霓虹点缀 */
+  --lab-glow: rgba(59, 130, 246, 0.4);
+
+  --lab-bg-page: #070b14;
+  --lab-bg: rgba(17, 26, 43, 0.55);
+  --lab-surface: rgba(17, 26, 43, 0.9);
+  --lab-border: rgba(56, 189, 248, 0.16);
+  --lab-text: #e6edf7;
+  --lab-text-secondary: #94a7c4;
+
+  --lab-header-height: 64px;
+  --lab-radius: 10px;
+  --lab-font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+}
+
+/* Element Plus 暗色模式变量（深海蓝调，与品牌色统一） */
+html.dark {
+  --el-bg-color: #111a2b;
+  --el-bg-color-page: #070b14;
+  --el-bg-color-overlay: #141e30;
+  --el-border-color: #1e2a3f;
+  --el-border-color-light: #1e2a3f;
+  --el-border-color-lighter: #223049;
+  --el-border-color-extra-light: #223049;
+  --el-text-color-primary: #e6edf7;
+  --el-text-color-regular: #c8d3e6;
+  --el-text-color-secondary: #94a7c4;
+  --el-text-color-placeholder: #5c6b85;
+  --el-fill-color: #16223a;
+  --el-fill-color-light: #16223a;
+  --el-fill-color-lighter: #1a2740;
+  --el-fill-color-blank: #111a2b;
+  --el-mask-color: rgba(4, 8, 16, 0.7);
+}
+
+/* ===== 基础重置 ===== */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC',
+    'Helvetica Neue', Arial, sans-serif;
+  color: var(--lab-text);
+  /* 顶部蓝色辉光 + 微网格 + 深海蓝底 */
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(59, 130, 246, 0.1), transparent 60%),
+    linear-gradient(rgba(56, 189, 248, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.025) 1px, transparent 1px),
+    var(--lab-bg-page);
+  background-size: auto, 44px 44px, 44px 44px, auto;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* ===== 布局工具 ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section {
+  padding: 60px 0;
+}
+.section-alt {
+  background: var(--lab-bg);
+}
+
+/* ===== 页面切换过渡（缓进缓出） ===== */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-16px);
+}
+
+/* ===== 内页顶部横幅 ===== */
+.page-banner {
+  background: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.16),
+      rgba(34, 211, 238, 0.06) 60%,
+      transparent
+    ),
+    #0b1322;
+  color: #fff;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--lab-border);
+}
+.page-banner .container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.page-banner-title {
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 0 0 24px var(--lab-glow);
+}
+.page-banner-sub {
+  font-size: 14px;
+  color: var(--lab-text-secondary);
+  letter-spacing: 1px;
+  font-family: var(--lab-font-mono);
+}
+
+/* ===== 通用卡片（玻璃拟态） ===== */
+.el-card {
+  border-radius: var(--lab-radius);
+  background: var(--lab-surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--lab-border);
+}
