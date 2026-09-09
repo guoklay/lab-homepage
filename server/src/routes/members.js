@@ -4,7 +4,7 @@ const { requireAuth } = require('../auth');
 
 const router = express.Router();
 
-// GET /api/members?type=faculty|phd|master|alumni|visiting&all=1（all=1 时含已隐藏成员，供后台使用）
+// GET /api/members?type=faculty|phd|master|undergrad|visiting|alumni&all=1（all=1 时含已隐藏成员，供后台使用）
 router.get('/', (req, res) => {
   const { type, all } = req.query;
   let sql = 'SELECT * FROM members';

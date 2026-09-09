@@ -8,6 +8,8 @@ const types = [
   { key: 'faculty', label: '教师' },
   { key: 'phd', label: '博士生' },
   { key: 'master', label: '硕士生' },
+  { key: 'undergrad', label: '本科生' },
+  { key: 'visiting', label: '访问学者' },
   { key: 'alumni', label: '校友' },
 ];
 

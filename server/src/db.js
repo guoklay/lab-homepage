@@ -42,7 +42,7 @@ function migrate() {
       created_at    TEXT DEFAULT ''
     );
 
-    -- 团队成员：type = faculty(教师) / phd(博士生) / master(硕士生) / alumni(校友) / visiting(访问学者)
+    -- 团队成员：type = faculty(教师) / phd(博士生) / master(硕士生) / undergrad(本科生) / visiting(访问学者) / alumni(校友)
     CREATE TABLE IF NOT EXISTS members (
       id                INTEGER PRIMARY KEY AUTOINCREMENT,
       name              TEXT NOT NULL,

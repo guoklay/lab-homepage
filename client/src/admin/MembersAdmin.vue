@@ -10,8 +10,9 @@ const typeMap = {
   faculty: '教师',
   phd: '博士生',
   master: '硕士生',
-  alumni: '校友',
+  undergrad: '本科生',
   visiting: '访问学者',
+  alumni: '校友',
 };
 
 const columns = [
